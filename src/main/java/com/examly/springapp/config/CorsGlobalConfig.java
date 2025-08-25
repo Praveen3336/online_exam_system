@@ -15,10 +15,7 @@ public class CorsGlobalConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
 
-        // ✅ Correct origin(s)
-        configuration.setAllowedOrigins(Arrays.asList("*")); 
-        // OR use your frontend URLs explicitly:
-        // configuration.setAllowedOrigins(Arrays.asList("http://localhost:8081", "https://online-examsystem.vercel.app"));
+        configuration.setAllowedOrigins(Arrays.asList("http://localhost:8081", "https://online-examsystem.vercel.app"));
 
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"));
         configuration.setAllowedHeaders(Arrays.asList("*"));
