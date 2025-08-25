@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Map;
 
-@CrossOrigin(origins = "http://172.16.84.15:8081")
+@CrossOrigin(origins = "https://online-examsystem.vercel.app")
 @RestController
 @RequestMapping("/api/exams")
 public class TeacherController {
