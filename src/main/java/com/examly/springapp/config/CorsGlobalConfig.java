@@ -14,8 +14,13 @@ public class CorsGlobalConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(Arrays.asList("https://online-examsystem.vercel.app")); // your React app
-        configuration.setAllowedMethods(Arrays.asList("GET","POST","PUT","DELETE","OPTIONS","PATCH"));
+
+        // ✅ Correct origin(s)
+        configuration.setAllowedOrigins(Arrays.asList("*")); 
+        // OR use your frontend URLs explicitly:
+        // configuration.setAllowedOrigins(Arrays.asList("http://localhost:8081", "https://online-examsystem.vercel.app"));
+
+        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"));
         configuration.setAllowedHeaders(Arrays.asList("*"));
         configuration.setAllowCredentials(true);
 
