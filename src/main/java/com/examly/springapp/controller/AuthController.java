@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
-@CrossOrigin(origins = "https://online-examsystem.vercel.app/")
+@CrossOrigin(origins = "https://online-examsystem.vercel.app")
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
